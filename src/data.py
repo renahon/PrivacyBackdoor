@@ -2,8 +2,8 @@ import torch
 import torch.utils.data as data
 import torchvision.transforms as transforms
 from torch.utils.data import TensorDataset
-import datasets as hgf
 import torchvision.datasets as datasets
+import datasets as hgf
 from transformers import BertTokenizer
 
 
@@ -65,8 +65,8 @@ def load_dataset(root, dataset, is_normalize=False, resize=None, is_augment=Fals
             transform_lst_test.append(DirectInlaid(**inlaid))
             inlaid_resolution = inlaid.get('target_size', (224, 224))[0]
 
-        train_dataset = datasets.CIFAR10(root, train=True, transform=transforms.Compose(transform_lst_train), download=False)
-        test_dataset = datasets.CIFAR10(root, train=False, transform=transforms.Compose(transform_lst_test), download=False)
+        train_dataset = datasets.CIFAR10(root, train=True, transform=transforms.Compose(transform_lst_train), download=True)
+        test_dataset = datasets.CIFAR10(root, train=False, transform=transforms.Compose(transform_lst_test), download=True)
         original_resolution = 32
         classes = 10
 

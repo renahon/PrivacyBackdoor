@@ -7,8 +7,17 @@ You can run all procedures using a single command.
 python src/main.py --mode vibkd --config_name vit_gelu_randhead_caltech
 ```
 
-`--mode`: `mlpvn|vibkd|txbkd|stdtr|dpbkd`; `mlpvn`: a preliminary demonstration of the backdoor attack on a toy MLP model; 
-`vibkd`: the backdoor attack on ViT; `txbkd`:the backdoor attack on BERT; `dpbkd`:the backdoor attack for differential privacy; `stdtr`: train a MLP model.
+`--mode`: `mlpvn|vibkd|txbkd|stdtr|dpbkd`; 
+
+`mlpvn`: a preliminary demonstration of the backdoor attack on a toy MLP model; 
+
+`vibkd`: the backdoor attack on ViT; 
+
+`txbkd`:the backdoor attack on BERT; 
+
+`dpbkd`:the backdoor attack for differential privacy; 
+
+`stdtr`: train a MLP model.
 
 `--config_name`: path to the configuration file: `./experiments/configs/{CONFIG_NAME}.yml`. This configuration files is about the details of the malicious initialization and the fine-tuning recipe.
 

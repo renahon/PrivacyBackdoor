@@ -162,3 +162,5 @@ cython_debug/
 ./idea
 *.xml
 .idea/PrivacyBackdoor.iml
+
+PATH_TO_DATASET/*

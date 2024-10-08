@@ -28,7 +28,7 @@ def build_mlp_model(info_dataset, info_model, info_train, logger, save_path):
                            activation=info_model['ACTIVATION'], preprocess_information=preprocess_information)
 
     if info_model['USE_BACKDOOR']:
-        bait_setting = info_model['BAIT_SETTING']
+        bait_setting = info_model["BACKDOOR"]['BAIT_CONSTRUCTION']
         weight_setting = info_model['WEIGHT_SETTING']
 
         bait_details = bait_setting['DETAILS']  # is_normalize=True, constant=1.0, image_fts=None
